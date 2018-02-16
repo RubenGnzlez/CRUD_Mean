@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{bookinstance.name}
+  p=bookinstance.lifespan
+  
+    
+    p Quieres borrar esta Copia?
+    
+    form(method='POST' action='')
+      div.form-group
+        input#id.form-control(type='hidden',name='id', required='true', value=bookinstance._id )
+
+      button.btn.btn-primary(type='submit') Delete
